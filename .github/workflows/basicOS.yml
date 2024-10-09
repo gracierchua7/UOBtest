@@ -5,7 +5,7 @@ on:
 
 jobs:
   builds:
-    runs-on: Ubunti- 16.04
+    runs-on: Ubuntu- 16.04
     name: My Build
     steps: 
       - name: Check out code
