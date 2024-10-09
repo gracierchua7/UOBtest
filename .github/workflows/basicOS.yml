@@ -7,19 +7,20 @@ jobs:
   builds:
     # create VM with ubuntu OS
     runs-on: Ubuntu-20.04
-    name: My Build
+    # name: My Build
     steps: 
     # first step to say hello
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Printing a greeting 
         run: |
+          ls
           echo "Hello world"
-      #- name: Set up Python
-      #  uses: actions/setup-python@v4
-      # with: 
-      #   python-version: '3.12' #set up python version
-      #- name: Install dependencies
+     # - name: Set up Python
+     #   uses: actions/setup-python@v4
+     #   with: 
+     #    python-version: '3.12' #set up python version
+     # - name: Install dependencies
       #  run: |
-      #    python -m pip install --upgrade pip
-      #   if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+       #  python -m pip install --upgrade pip
+        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
