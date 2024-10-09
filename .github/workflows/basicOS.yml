@@ -41,3 +41,15 @@ jobs:
       - name: Begin pytest
         run: |
           pytest
+
+      # this is where we access the hidden repo
+      - name: Checkout Hidden repo
+        uses: actions/checkout@v4
+        with:
+          repository: gracierchua7/UOBHidden
+          token: ${{ secrets.SECRETUOB }}
+
+      # this prints out the hidden files
+      - name: Print out hidden files 
+        run: |
+          ls
