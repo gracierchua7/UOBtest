@@ -6,7 +6,7 @@ on:
 jobs:
   builds:
     # create VM with ubuntu OS
-    runs-on: Ubuntu- 16.04
+    runs-on: Ubuntu- 20.04
     name: My Build
     steps: 
     # first step to say hello
