@@ -15,11 +15,11 @@ jobs:
       - name: Printing a greeting 
         run: |
           echo "Hello world"
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with: 
-          python-version: '3.12' #set up python version
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      #- name: Set up Python
+      #  uses: actions/setup-python@v4
+      # with: 
+      #   python-version: '3.12' #set up python version
+      #- name: Install dependencies
+      #  run: |
+      #    python -m pip install --upgrade pip
+      #   if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
