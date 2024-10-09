@@ -1,7 +1,5 @@
 import pytest
+from hello_world import hello_world
 
-def test_add():
-    assert 2 + 2 == 4
-
-if __name__ == "__main__":
-    pytest.main()
+def test_hello_world():
+    assert hello_world() ++ "Hello, World!"
