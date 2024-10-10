@@ -57,10 +57,9 @@ jobs:
       #     cd hiddenfolder
       #     ls
       - name: Discord Webhook Action
-        uses: tsickert/discord-webhook@v5.3.0
+        uses: sebastianpopp/discord-action@releases/v2
         with:
           webhook: ${{ secrets.WEBHOOK_URL }}
-   #       content: "hello"
           message: ${{ github.repository }} has been successfully deployed.
 
       - name: Deploy to GitHub Pages
