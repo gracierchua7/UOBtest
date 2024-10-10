@@ -71,7 +71,7 @@ jobs:
 
       - if: ${{ success() }}
         name: discord
-        uses: tsickert/discord-webhook@v5.3.0
+        uses: bythope/discord-webhook-messages@v1.1.0
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
         
