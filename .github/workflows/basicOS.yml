@@ -72,12 +72,12 @@ jobs:
         name: Run Discord Webhook
         uses: sebastianpopp/discord-action@releases/v2
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook: ${{ secrets.WEBHOOK_URL }}
           message: ${{ github.repository }} is deployed.
 
       - if: ${{ failure() }}
         name: Run Discord Webhook
         uses: sebastianpopp/discord-action@releases/v2
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook: ${{ secrets.WEBHOOK_URL }}
           message: ${{ github.repository }} deployment failed.
