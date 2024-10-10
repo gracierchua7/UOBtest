@@ -60,4 +60,4 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
-          content: "hellllooooooo let's go for lunch :)"
+          content: "我们去吃 LEGOOOOOO"
