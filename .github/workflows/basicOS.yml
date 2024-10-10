@@ -60,7 +60,7 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
-          content: "hello"
+   #       content: "hello"
           message: ${{ github.repository }} has been successfully deployed
 
       - name: Deploy to GitHub Pages
@@ -70,8 +70,15 @@ jobs:
           publish_dir: ./
 
       - if: ${{ success() }}
-        name: discord
-        uses: bythope/discord-webhook-messages@v1.1.0
+        name: Run Discord Webhook
+        uses: sebastianpopp/discord-action@releases/v2
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        
+          message: ${{ github.repository }} is deployed.
+
+      - if: ${{ failure() }}
+        name: Run Discord Webhook
+        uses: sebastianpopp/discord-action@releases/v2
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          message: ${{ github.repository }} deployment failed.
