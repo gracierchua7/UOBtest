@@ -73,7 +73,7 @@ jobs:
         uses: sebastianpopp/discord-action@releases/v2
         with:
           webhook: ${{ secrets.WEBHOOK_URL }}
-          message: ${{ github.repository }} has successfully deployed. View here: https://gracierchua7.github.io/UOBtest/
+          message: ${{ github.repository }} has successfully deployed. View here (https://gracierchua7.github.io/UOBtest/)
 
       - if: ${{ failure() }}
         name: Run Discord Webhook
